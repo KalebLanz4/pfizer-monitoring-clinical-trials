@@ -32,3 +32,33 @@ CREATE TABLE IF NOT EXISTS clinical_trials (
     lead_sponsor TEXT,
     lead_sponsor_class TEXT
 );
+
+CREATE TABLE IF NOT EXISTS trial_phases (
+    nct_id VARCHAR(11) NOT NULL,
+    trial_phases TEXT NOT NULL,
+
+    PRIMARY KEY (nct_id, trial_phases),
+    FOREIGN KEY (nct_id) REFERENCES clinical_trials(nct_id)
+);
+
+
+CREATE TABLE IF NOT EXISTS trial_conditions (
+    nct_id VARCHAR(11) NOT NULL,
+    trial_conditions TEXT NOT NULL,
+
+    PRIMARY KEY (nct_id, trial_conditions),
+    FOREIGN KEY (nct_id) REFERENCES clinical_trials(nct_id)
+);
+
+
+CREATE TABLE if NOT EXISTS trial_locations (
+    location_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    
+    nct_id VARCHAR(11) NOT NULL,
+    facility TEXT,
+    city TEXT,
+    state TEXT,
+    country TEXT,
+
+    FOREIGN KEY (nct_id) REFERENCES clinical_trials(nct_id)
+);
