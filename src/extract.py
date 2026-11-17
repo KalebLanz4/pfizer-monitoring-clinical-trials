@@ -5,7 +5,7 @@ def extract_clinical_trials():
     # GET request for Pfizer as Lead
     query_params = {
         'query.lead' : 'pfizer',
-        'pageSize' : 5
+        'pageSize' : 20
     }
     response = requests.get("https://clinicaltrials.gov/api/v2/studies", params=query_params)
 
