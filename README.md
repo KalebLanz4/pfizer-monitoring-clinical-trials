@@ -68,6 +68,7 @@ Users can answer five questions:
 
 Users can select an option and enter additional parameters, such as the number of days or results to display.
 
+![Analytics CLI Demo](images/analytics-cli.png)
 
 ## Installation & Usage
 
