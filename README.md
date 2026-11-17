@@ -58,14 +58,6 @@ The tables are connected through `nct_id`, which is the primary key in `clinical
 
 The project includes an interactive command-line interface that runs SQL queries against the PostgreSQL database.
 
-Users can answer five questions:
-
-1. How many clinical trials are in each status?
-2. Which ongoing trials have upcoming estimated completion dates?
-3. Which medical conditions have the most clinical trials?
-4. Which countries have the most research locations?
-5. What is the average patient enrollment for each trial phase?
-
 Users can select an option and enter additional parameters, such as the number of days or results to display.
 
 ![Analytics CLI Demo](images/analytics-cli.png)
@@ -76,6 +68,11 @@ Users can select an option and enter additional parameters, such as the number o
 
 **1. Clone the repository and enter the project directory.**
 
+```bash
+git clone https://github.com/KalebLanz4/pfizer-monitoring-clinical-trials.git
+cd pfizer-monitoring-clinical-trials
+```
+
 **2. Create a virtual environment and install dependencies.**
 
 ```bash
@@ -85,6 +82,8 @@ pip install -r requirements.txt
 ```
 
 **3. Create the PostgreSQL database and tables.**
+
+Make sure PostgreSQL is running.
 
 ```bash
 createdb pfizer_clinical_trials
