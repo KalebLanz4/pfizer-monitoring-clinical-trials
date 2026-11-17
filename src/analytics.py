@@ -56,7 +56,7 @@ def upcoming_trials(days):
 
             cursor.execute(query, [days, days])
             result = cursor.fetchall()
-            print("Clincal Trials Upcoming Completion dates: \n")
+            print("Clinical Trials With Upcoming Completion Dates: \n")
             for title_overview, trial_end_date in result:
                 print(f"{title_overview}: {trial_end_date}")
 
